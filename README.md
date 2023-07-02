@@ -19,17 +19,16 @@ Check the terminal for the output.
 
 This is a bash file that competes between two agents (BitBoard) and (CharBoard). 
 
-CharBoard was my initial approach to build an AI agent. However, on diving deep into how to make computations efficient and faster, I explored the usage of Bit boards and their manipulations. 
+CharBoard was our initial approach to build an AI agent. However, on diving deep into how to make computations efficient and faster, we explored the usage of Bit boards and their manipulations. 
 
 ## File Description:
-- BotRunner.sh: Bash file to compile the BitBoard project and CharBoard project. It resolves the board after every agent's move and feeds this as an input to the other agent. This loops until one agent wins. 
+- ```BotRunner.sh```: Bash file to compile the BitBoard project and CharBoard project. It resolves the board after every agent's move and feeds this as an input to the other agent. This loops until one agent wins. 
 
-- BitBoard: BitBoard uses bits to save the board which is computationally effective and memory friendly. Each board needs two bit boards of size 19\*19, to save the placements of the players. Thus, it requires only 19\*19\*2(bits) ~ 92 bytes.
-I would be diving deep into explaining this implementation of Pente.
+- ```BitBoard```: BitBoard uses bits to save the board which is computationally effective and memory friendly. Each board needs two bit boards of size 19\*19, to save the placements of the players. Thus, it requires only 19\*19\*2(bits) ~ 92 bytes.
 
-- CharBoard: CharBoard uses char array to store and compute the next moves. This means that in every iteration it takes about 19\*19\*8(bits) ~ 361 bytes. This is not cache friendly and for dense boards it takes a lot of space and computational power to find the best move. 
+- ```CharBoard```: CharBoard uses char array to store and compute the next moves. This means that in every iteration it takes about 19\*19\*8(bits) ~ 361 bytes. This is not cache friendly and for dense boards it takes a lot of space and computational power to find the best move. 
 
-- ResolveBoard.cpp: This acts as a bridge between two agents which expects a placement of a player, places the agent's move accordingly on the board, resolves any captures and gives the new input to the other agent to play on. It also displays the current board configuration to the terminal. It checks if the game end conditions are met, if so, it asks the bash file to terminate. 
+- ```ResolveBoard.cpp```: This acts as a bridge between two agents which expects a placement of a player, places the agent's move accordingly on the board, resolves any captures and gives the new input to the other agent to play on. It also displays the current board configuration to the terminal. It checks if the game end conditions are met, if so, it asks the bash file to terminate. 
 
 ## Dependencies 
 gcc/g++
