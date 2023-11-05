@@ -1,5 +1,4 @@
-# Pente Game
-
+# AI Agent for Pente Game
 ## Project Description
 
 Pente is an advanced version of tic tac toe, played on a 19x19 board, where players aim to create a sequence of five stones in a row while also having the option to capture five pairs of their opponent's stones to win the game. It requires more strategic thinking than tic tac toe due to the larger board and additional win condition.
